@@ -1,0 +1,33 @@
+# Ignore virtual environment
+env/
+
+# Ignore Django migrations
+my_django_project/**/migrations/
+
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+
+# Ignore database files
+*.sqlite3
+
+# Ignore environment files
+.env
+
+# Ignore IDE-specific files (VSCode, PyCharm, etc.)
+.vscode/
+.idea/
+
+# Ignore logs
+*.log
+
+# Ignore static and media files (if they are generated)
+staticfiles/
+media/
+
+# Ignore compiled code and coverage reports
+*.coverage
+coverage/
+
+# Ignore node_modules (if using a React frontend)
+node_modules/
