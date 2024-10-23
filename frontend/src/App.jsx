@@ -13,11 +13,29 @@ function Logout() {
 
 function RegisterAndMakeLogout() {
   localStorage.clear();
-  return <Navigate to="/login" />;
+  return <Register />;
 }
 
 function App() {
-  return <></>;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <ProtectedRoute>
+              <Home />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route path="/login" element={<Login />} />
+        <Route path="/logout" element={<Logout />} />
+        <Route path="/register" element={<RegisterAndMakeLogout />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
